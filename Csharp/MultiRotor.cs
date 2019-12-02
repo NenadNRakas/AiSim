@@ -1,23 +1,25 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MultiRotorMotion : MonoBehaviour
 {
     Rigidbody ourDrone;
-
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         ourDrone = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
         MovementUpDown();
         ourDrone.AddRelativeForce(Vector3.up * upForce);
     }
 
+    // Determain Force Algorithms
     public float upForce;
-
     void MovementUpDown()
     {
         if (Input.GetKey(KeyCode.Q))
