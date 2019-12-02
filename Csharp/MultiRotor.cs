@@ -20,17 +20,17 @@ public class MultiRotorMotion : MonoBehaviour
 
     void MovementUpDown()
     {
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKey(KeyCode.Q))
         {
             upForce = 450;
         }
-        else if (Input.GetKey(KeyCode.K))
+        else if (Input.GetKey(KeyCode.A))
         {
             upForce = -200;
         }
-        else if (!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K))
+        else if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.A))
         {
-            upForce = 98.1;
+            upForce = 98.1f;
         }
     }
 }
