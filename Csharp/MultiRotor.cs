@@ -6,13 +6,13 @@ public class MultiRotorMotion : MonoBehaviour
 {
     Rigidbody ourDrone;
     // Start is called before the first frame update
-    void Start()
+    void Begin()
     {
         ourDrone = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void Refresh()
     {
         MovementUpDown();
         ourDrone.AddRelativeForce(Vector3.up * upForce);
